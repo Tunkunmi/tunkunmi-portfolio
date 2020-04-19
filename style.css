@@ -1,0 +1,314 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior : smooth;
+}
+a {
+    text-decoration: none;
+}
+.bold {
+    font-weight: bold;
+}
+button {
+    outline: none;
+    background: none;
+    border: 0;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+.center {
+    text-align: center;
+}
+button:hover {
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 40px;
+    z-index : 50
+}
+nav.newNav {
+    background-color: rgb(226, 76, 38);
+}
+nav a {
+    color: white;
+}
+.dark-gray {
+    color: rgb(85, 69, 69)
+}
+.light-gray {
+    color: rgb(104, 87, 87)
+}
+.nav-links {
+    text-transform: uppercase;
+    padding: 0 8px;
+}
+.toggle-nav {
+    display: none;
+    color: white;
+}
+.nav-overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,0,0);
+    flex-direction: column;
+    z-index : 100
+}
+.nav-overlay a {
+    color: darkgray;
+    padding: 30px 0;
+    font-size: 2rem;
+}
+.nav-overlay a:hover {
+    color: white;
+}
+.close-overlay {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    color: antiquewhite;
+    font-size: 2rem
+}
+
+.section-head {
+    text-align: center;
+    border-bottom: 5px rgb(226, 76, 38) ridge;
+    width: 150px;
+    margin: 35px auto;
+}
+
+.s-intro {
+    height: 100vh;
+    width : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(img/bg1.jpg);
+    background-size: 100% 100%;
+}
+.s-intro h1 {
+    font-size: 3rem;
+    color: white
+}
+.s-intro div {
+    margin: 10px 0;
+}
+.job-title {
+    background-color: rgb(226, 76, 38);
+    font-size: 22px;
+    padding: 12px;
+    color: white
+}
+.socials {
+    margin: 30px 0;
+}
+.socials a {
+    color: white;
+    margin: 0 7px;
+}
+
+/* ABOUT PAGE */
+.about{
+    padding: 80px 15px;
+    line-height: 30px;
+}
+.about-main {
+    display: flex;
+}
+.about-main > div {
+    padding: 12px;
+    width: 50%;
+}
+.skill-bar {
+    background-color: grey;
+    border-radius: 8px;
+    height: 12px;
+    width: 100%
+}
+
+.skill-progress {
+    background-color: rgb(226, 76, 38);
+    height: 100%;
+    width: 70%;
+    border-radius: 8px;
+}
+
+/* PORTFOLIO PAGE */
+.portfolio {
+    padding: 80px 15px;
+}
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 14px;
+    box-shadow: 3px 3px 6px #777
+}
+.image img {
+    width: 100%;
+    height: 100%
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 7, 7, 0.692);
+    opacity: 0;
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-overlay i {
+    color: rgba(3, 3, 3, 0.849);
+    font-size: 90px
+}
+.image-overlay i:hover {
+    color: white;
+}
+.image:hover .image-overlay {
+    opacity: 1;
+}
+.slideshow-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: 120;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.slideshow-img {
+    width: auto;
+    max-width: 95vw;
+    height: auto;
+    max-height: 90vh;
+}
+.arrow {
+    position: absolute;
+    top: 46%
+}
+.arrow-left {
+    left: 15px;
+}
+.arrow-right {
+    right : 15px;
+} 
+
+/* CONTACT */
+.contact {
+    padding : 80px 15px;
+}
+.contact-main {
+    display: flex;
+}
+.contact-main form, .contact-main div {
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box
+}
+.contact-main form input, .contact-main form textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding : 8px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 0;
+    border-bottom: 2px solid rgb(226, 76, 38);
+}
+
+.contact-main button {
+    display: block;
+    padding: 12px;
+    background-color: rgb(226, 76, 38);
+    color: white;
+    font-size: 1.1rem;
+    margin: 28px auto;
+}
+.contact-main div.contact-details {
+    padding-left: 45px;
+}
+.contact-details p {
+    font-size: 1.2rem;
+    font-weight: bold
+}
+.contact-details i {
+    margin-right: 10px
+}
+.error {
+    color: red;
+}
+.success {
+    color: green
+}
+/* FOOTER */
+footer {
+    background-color: rgb(226, 76, 38);
+    padding: 12px;
+}
+footer p{
+    margin: 0;
+}
+
+@media screen and (max-width : 768px) {
+    nav {
+        padding: 10px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .toggle-nav {
+        display: block;
+    }
+    .s-intro h1 {
+        font-size: 2.3rem
+    }
+    .about-main{
+        flex-direction: column;
+    }
+    .about-main > div {
+        width: 100%;
+        box-sizing: border-box
+    }
+    .skill-bar {
+        width: 100%;
+    }
+    .arrow {
+        top: unset;
+        bottom: 80px;
+        margin: 0 30px;
+    }
+    .contact-main {
+        flex-direction: column;
+    }
+    .contact-main form, .contact-main div {
+        width: 100%
+    }
+}
