@@ -31,7 +31,7 @@ const nextImage = document.querySelector('.arrow-right');
 
 const imageShowing = document.querySelector('.slideshow-img');
 
-const images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg', 'img/p5.jpg', 'img/p6.jpg', 'img/p7.jpg', 'img/p8.jpg', 'img/p9.jpg'];
+const images = ['img/p1.jpg', 'img/p2.jpg', 'img/p3.jpg', 'img/p4.jpg', 'img/p5.jpg', 'img/p6.jpg', 'img/p7.jpg', 'img/p8.jpg', 'img/p9.jpg', 'img/p10.jpg', 'img/p11.jpg', 'img/p12.jpg'];
 
 let currentSlide = 0;
 
@@ -99,6 +99,8 @@ form.addEventListener('submit', submitContactForm);
 
 function submitContactForm(e) {
     e.preventDefault();
+    errorDisplay.innerText = '';
+    successDisplay.innerText = '';
     submitButton.disabled = true;
     submitButton.innerText = 'Sending...';
     let { name, email, message, subject } = form;
