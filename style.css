@@ -97,7 +97,7 @@ nav a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(img/bg1.jpg);
+    /* background-image: url(img/bg1.jpg); */
     background-size: 100% 100%;
 }
 .s-intro h1 {
