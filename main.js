@@ -107,7 +107,7 @@ function submitContactForm(e) {
     message = message.value;
     subject = subject.value;
     
-    fetch('http://localhost:3000/submit', {
+    fetch('https://tk-contact.herokuapp.com/submit', {
         method : 'POST',
         headers : {
             'Accept' : 'application/json',
