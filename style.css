@@ -46,8 +46,8 @@ nav a {
     color: white;
 }
 nav img {
-    height: 80px;
-    width: 120px
+    height: auto;
+    width: 90px
 }
 .dark-gray {
     color: rgb(85, 69, 69)
@@ -108,7 +108,7 @@ nav.newNav .toggle-nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .s-intro h1 {
     font-size: 3rem;
